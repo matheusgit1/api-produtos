@@ -1,0 +1,866 @@
+{
+	"info": {
+		"_postman_id": "b158e2cf-afae-4c98-9fcc-08edd3da1d5b",
+		"name": "produtos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17845763"
+	},
+	"item": [
+		{
+			"name": "create (jWT)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Maleta De Maquiagem Profissional Grande Varias Cores Modelos\",\r\n    \"price\": 197.30,\r\n    \"description\": \"Maleta Profissional Grande\\nCom Maquiagem\\nMaleta + Maquiagem\",\r\n    \"categories\": [\"make\",\"make-up\",\"maquiagem\",\"sombras\",\"feminino\",\"base\"],\r\n    \"mainCategories\": \"maquiagem\",\r\n    \"installments\": 10,\r\n    \"images\": [\"https://http2.mlstatic.com/D_NQ_NP_767723-MLB48862238150_012022-O.webp\",\"https://http2.mlstatic.com/D_NQ_NP_673525-MLB49186875333_022022-O.webp\",\"https://http2.mlstatic.com/D_NQ_NP_972443-MLB48874106874_012022-O.webp\",\"https://http2.mlstatic.com/D_NQ_NP_668495-MLB48874134693_012022-O.webp\"\r\n    ],\r\n    \"discount\": 45,\r\n    \"marc\": \"MAC\",\r\n    \"conditions\": \"novo\",\r\n    \"features\": [\r\n        {\r\n            \"title\": \"Características principais\",\r\n            \"body\":{\r\n                \"Marca\":\"Ruby Rose\",\r\n                \"Modelo\":\"Ruby's 1153\"\r\n            }\r\n        }\r\n    ],\r\n    \"stocks\": 80\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_API_PRODUTOS}}/product/create",
+					"host": [
+						"{{URL_API_PRODUTOS}}"
+					],
+					"path": [
+						"product",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create (jWT)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBlcmVpcmEyLm1hdGhldXNhbHZlc0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Im1hdGhldXMiLCJpZCI6IjdkMTVhNmZiLTY5ZGYtNGFmOC1hYzI5LTViNzVhYjYzNGQ4OCIsImlhdCI6MTY2MDE3NzQxMiwiZXhwIjoxNjYwNzgyMjEyfQ.NodxDhXLsyHV0NFO7DEaxDa4wmHdCVtTF3ustHoVUTM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"maquina de lavar\",\r\n    \"price\": 350.00,\r\n    \"description\": \"Maquina de lavar autonoma com economia de energia\",\r\n    \"categories\": [\"eletronico\",\"domestico\",\"para casa\"],\r\n    \"mainCategories\": \"domestico\",\r\n    \"installments\": 4,\r\n    \"images\": [\"https://electrolux.vtexassets.com/arquivos/ids/203660/lavadora-turbo-economia-lac09-com-dispenser-autoclean-e-tecnologia-jeteclean-cor-branca-Detalhe1.jpg?v=637394240050630000\", \"https://s2.glbimg.com/NzitoDQGhjN6--RWdU8z85QMKmw=/e.glbimg.com/og/ed/f/original/2018/12/21/lava__seca_samsung_wd4000_de_10.2kg.jpg\"],\r\n    \"discount\": 0,\r\n    \"marc\": \"eletrolux\",\r\n    \"conditions\": \"novo\",\r\n    \"features\": [\r\n        {\r\n            \"title\": \"gerais\",\r\n            \"body\":{\r\n                \"tipo\":\"eletronico\",\r\n                \"peso\": \"30kg\"\r\n            }\r\n        },\r\n        {\r\n            \"title\": \"gerais\",\r\n            \"body\":{\r\n                \"tipo\":\"eletronico\",\r\n                \"peso\": \"30kg\"\r\n            }\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/product/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"product",
+								"create"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "889"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"379-unYRAnJv+4F5Lwcsfm6SHemCmGA\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 11 Aug 2022 21:18:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"maquina de lavar\",\n    \"price\": 350,\n    \"description\": \"Maquina de lavar autonoma com economia de energia\",\n    \"categories\": [\n        \"eletronico\",\n        \"domestico\",\n        \"para casa\"\n    ],\n    \"mainCategories\": \"domestico\",\n    \"installments\": \"4\",\n    \"images\": [\n        \"https://electrolux.vtexassets.com/arquivos/ids/203660/lavadora-turbo-economia-lac09-com-dispenser-autoclean-e-tecnologia-jeteclean-cor-branca-Detalhe1.jpg?v=637394240050630000\",\n        \"https://s2.glbimg.com/NzitoDQGhjN6--RWdU8z85QMKmw=/e.glbimg.com/og/ed/f/original/2018/12/21/lava__seca_samsung_wd4000_de_10.2kg.jpg\"\n    ],\n    \"userId\": \"7d15a6fb-69df-4af8-ac29-5b75ab634d88\",\n    \"discount\": \"0\",\n    \"marc\": \"eletrolux\",\n    \"conditions\": \"novo\",\n    \"features\": [\n        {\n            \"title\": \"gerais\",\n            \"body\": {\n                \"tipo\": \"eletronico\",\n                \"peso\": \"30kg\"\n            }\n        },\n        {\n            \"title\": \"gerais\",\n            \"body\": {\n                \"tipo\": \"eletronico\",\n                \"peso\": \"30kg\"\n            }\n        }\n    ],\n    \"id\": \"817a277b-d9cb-4cfb-aeb5-64c2affa30c7\",\n    \"createdAt\": \"2022-08-11T21:18:20.087Z\",\n    \"updatedAt\": \"2022-08-11T21:18:20.087Z\"\n}"
+				},
+				{
+					"name": "create (jWT)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBlcmVpcmEyLm1hdGhldXNhbHZlc0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Im1hdGhldXMiLCJpZCI6IjdkMTVhNmZiLTY5ZGYtNGFmOC1hYzI5LTViNzVhYjYzNGQ4OCIsImlhdCI6MTY2MDE3NzQxMiwiZXhwIjoxNjYwNzgyMjEyfQ.NodxDhXLsyHV0NFO7DEaxDa4wmHdCVtTF3ustHoVUTM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"maquina de lavar\",\r\n    \"price\": 350.00,\r\n    \"description\": \"Maquina de lavar autonoma com economia de energia\",\r\n    \"categories\": [\"para o lar\"],\r\n    \"mainCategories\": \"domestico\",\r\n    \"installments\": 4,\r\n    \"images\": [\"https://electrolux.vtexassets.com/arquivos/ids/203660/lavadora-turbo-economia-lac09-com-dispenser-autoclean-e-tecnologia-jeteclean-cor-branca-Detalhe1.jpg?v=637394240050630000\", \"https://s2.glbimg.com/NzitoDQGhjN6--RWdU8z85QMKmw=/e.glbimg.com/og/ed/f/original/2018/12/21/lava__seca_samsung_wd4000_de_10.2kg.jpg\"],\r\n    \"discount\": 0,\r\n    \"marc\": \"eletrolux\",\r\n    \"conditions\": \"novo\",\r\n    \"features\": [\r\n        {\r\n            \"title\": \"gerais\",\r\n            \"body\":{\r\n                \"tipo\":\"eletronico\",\r\n                \"peso\": \"30kg\"\r\n            }\r\n        },\r\n        {\r\n            \"title\": \"gerais\",\r\n            \"body\":{\r\n                \"tipo\":\"eletronico\",\r\n                \"peso\": \"30kg\"\r\n            }\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/product/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"product",
+								"create"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "881"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"371-EpGj7K1QxYYaKWMrmRdAwb4qBvc\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 12 Aug 2022 02:34:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"maquina de lavar\",\n    \"price\": 350,\n    \"description\": \"Maquina de lavar autonoma com economia de energia\",\n    \"categories\": [\n        \"para o lar\"\n    ],\n    \"mainCategories\": \"domestico\",\n    \"installments\": \"4\",\n    \"images\": [\n        \"https://electrolux.vtexassets.com/arquivos/ids/203660/lavadora-turbo-economia-lac09-com-dispenser-autoclean-e-tecnologia-jeteclean-cor-branca-Detalhe1.jpg?v=637394240050630000\",\n        \"https://s2.glbimg.com/NzitoDQGhjN6--RWdU8z85QMKmw=/e.glbimg.com/og/ed/f/original/2018/12/21/lava__seca_samsung_wd4000_de_10.2kg.jpg\"\n    ],\n    \"userId\": \"7d15a6fb-69df-4af8-ac29-5b75ab634d88\",\n    \"discount\": \"0\",\n    \"marc\": \"eletrolux\",\n    \"conditions\": \"novo\",\n    \"features\": [\n        {\n            \"title\": \"gerais\",\n            \"body\": {\n                \"tipo\": \"eletronico\",\n                \"peso\": \"30kg\"\n            }\n        },\n        {\n            \"title\": \"gerais\",\n            \"body\": {\n                \"tipo\": \"eletronico\",\n                \"peso\": \"30kg\"\n            }\n        }\n    ],\n    \"isActive\": true,\n    \"id\": \"a04b9db0-3d58-4b7e-8921-f059b73dd235\",\n    \"createdAt\": \"2022-08-12T02:34:09.630Z\",\n    \"updatedAt\": \"2022-08-12T02:34:09.630Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get by id (ok)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL_API_PRODUTOS}}/product/7239d0f2-2e79-45d0-8b1f-2859542429b4",
+					"host": [
+						"{{URL_API_PRODUTOS}}"
+					],
+					"path": [
+						"product",
+						"7239d0f2-2e79-45d0-8b1f-2859542429b4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3003/product/bc9b1acb-6f81-4546-bc56-148ac7bd3a0c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"product",
+								"bc9b1acb-6f81-4546-bc56-148ac7bd3a0c"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "891"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"37b-sDVNeOYWrWssGnq026qPuQrAyAk\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 11 Aug 2022 20:07:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"bc9b1acb-6f81-4546-bc56-148ac7bd3a0c\",\n    \"name\": \"maquina de lavar\",\n    \"price\": \"350\",\n    \"description\": \"Maquina de lavar autonoma com economia de energia\",\n    \"categories\": [\n        \"eletronico\",\n        \"domestico\",\n        \"para casa\"\n    ],\n    \"mainCategories\": \"domestico\",\n    \"installments\": \"4\",\n    \"images\": [\n        \"https://electrolux.vtexassets.com/arquivos/ids/203660/lavadora-turbo-economia-lac09-com-dispenser-autoclean-e-tecnologia-jeteclean-cor-branca-Detalhe1.jpg?v=637394240050630000\",\n        \"https://s2.glbimg.com/NzitoDQGhjN6--RWdU8z85QMKmw=/e.glbimg.com/og/ed/f/original/2018/12/21/lava__seca_samsung_wd4000_de_10.2kg.jpg\"\n    ],\n    \"userId\": \"7d15a6fb-69df-4af8-ac29-5b75ab634d88\",\n    \"discount\": \"0\",\n    \"marc\": \"eletrolux\",\n    \"conditions\": \"novo\",\n    \"features\": [\n        {\n            \"title\": \"gerais\",\n            \"body\": {\n                \"tipo\": \"eletronico\",\n                \"peso\": \"30kg\"\n            }\n        },\n        {\n            \"title\": \"gerais\",\n            \"body\": {\n                \"tipo\": \"eletronico\",\n                \"peso\": \"30kg\"\n            }\n        }\n    ],\n    \"createdAt\": \"2022-08-11T19:38:35.335Z\",\n    \"updatedAt\": \"2022-08-11T19:38:35.335Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get list product with limits (ok)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL_API_PRODUTOS}}/product/list/limit/0",
+					"host": [
+						"{{URL_API_PRODUTOS}}"
+					],
+					"path": [
+						"product",
+						"list",
+						"limit",
+						"0"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get list product with limits",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3003/product/list/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"product",
+								"list",
+								"10"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2677"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a75-X5BENhBqZe221ZKwd4VfCdSxYPU\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 11 Aug 2022 20:27:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"3b836249-ee65-488c-bee1-6c40615b594e\",\n        \"name\": \"maquina de lavar\",\n        \"price\": \"350\",\n        \"description\": \"Maquina de lavar autonoma com economia de energia\",\n        \"categories\": [\n            \"eletronico\",\n            \"domestico\",\n            \"para casa\"\n        ],\n        \"mainCategories\": \"domestico\",\n        \"installments\": \"4\",\n        \"images\": [\n            \"https://electrolux.vtexassets.com/arquivos/ids/203660/lavadora-turbo-economia-lac09-com-dispenser-autoclean-e-tecnologia-jeteclean-cor-branca-Detalhe1.jpg?v=637394240050630000\",\n            \"https://s2.glbimg.com/NzitoDQGhjN6--RWdU8z85QMKmw=/e.glbimg.com/og/ed/f/original/2018/12/21/lava__seca_samsung_wd4000_de_10.2kg.jpg\"\n        ],\n        \"userId\": \"7d15a6fb-69df-4af8-ac29-5b75ab634d88\",\n        \"discount\": \"0\",\n        \"marc\": \"eletrolux\",\n        \"conditions\": \"novo\",\n        \"features\": [\n            {\n                \"title\": \"gerais\",\n                \"body\": {\n                    \"tipo\": \"eletronico\",\n                    \"peso\": \"30kg\"\n                }\n            },\n            {\n                \"title\": \"gerais\",\n                \"body\": {\n                    \"tipo\": \"eletronico\",\n                    \"peso\": \"30kg\"\n                }\n            }\n        ],\n        \"createdAt\": \"2022-08-11T17:01:03.626Z\",\n        \"updatedAt\": \"2022-08-11T17:01:03.626Z\"\n    },\n    {\n        \"id\": \"bc9b1acb-6f81-4546-bc56-148ac7bd3a0c\",\n        \"name\": \"maquina de lavar\",\n        \"price\": \"350\",\n        \"description\": \"Maquina de lavar autonoma com economia de energia\",\n        \"categories\": [\n            \"eletronico\",\n            \"domestico\",\n            \"para casa\"\n        ],\n        \"mainCategories\": \"domestico\",\n        \"installments\": \"4\",\n        \"images\": [\n            \"https://electrolux.vtexassets.com/arquivos/ids/203660/lavadora-turbo-economia-lac09-com-dispenser-autoclean-e-tecnologia-jeteclean-cor-branca-Detalhe1.jpg?v=637394240050630000\",\n            \"https://s2.glbimg.com/NzitoDQGhjN6--RWdU8z85QMKmw=/e.glbimg.com/og/ed/f/original/2018/12/21/lava__seca_samsung_wd4000_de_10.2kg.jpg\"\n        ],\n        \"userId\": \"7d15a6fb-69df-4af8-ac29-5b75ab634d88\",\n        \"discount\": \"0\",\n        \"marc\": \"eletrolux\",\n        \"conditions\": \"novo\",\n        \"features\": [\n            {\n                \"title\": \"gerais\",\n                \"body\": {\n                    \"tipo\": \"eletronico\",\n                    \"peso\": \"30kg\"\n                }\n            },\n            {\n                \"title\": \"gerais\",\n                \"body\": {\n                    \"tipo\": \"eletronico\",\n                    \"peso\": \"30kg\"\n                }\n            }\n        ],\n        \"createdAt\": \"2022-08-11T19:38:35.335Z\",\n        \"updatedAt\": \"2022-08-11T19:38:35.335Z\"\n    },\n    {\n        \"id\": \"41518acd-806a-49ac-b7a4-b0320bbcbeac\",\n        \"name\": \"maquina de lavar\",\n        \"price\": \"350\",\n        \"description\": \"Maquina de lavar autonoma com economia de energia\",\n        \"categories\": [\n            \"eletronico\",\n            \"domestico\",\n            \"para casa\"\n        ],\n        \"mainCategories\": \"domestico\",\n        \"installments\": \"4\",\n        \"images\": [\n            \"https://electrolux.vtexassets.com/arquivos/ids/203660/lavadora-turbo-economia-lac09-com-dispenser-autoclean-e-tecnologia-jeteclean-cor-branca-Detalhe1.jpg?v=637394240050630000\",\n            \"https://s2.glbimg.com/NzitoDQGhjN6--RWdU8z85QMKmw=/e.glbimg.com/og/ed/f/original/2018/12/21/lava__seca_samsung_wd4000_de_10.2kg.jpg\"\n        ],\n        \"userId\": \"7d15a6fb-69df-4af8-ac29-5b75ab634d88\",\n        \"discount\": \"0\",\n        \"marc\": \"eletrolux\",\n        \"conditions\": \"novo\",\n        \"features\": [\n            {\n                \"title\": \"gerais\",\n                \"body\": {\n                    \"tipo\": \"eletronico\",\n                    \"peso\": \"30kg\"\n                }\n            },\n            {\n                \"title\": \"gerais\",\n                \"body\": {\n                    \"tipo\": \"eletronico\",\n                    \"peso\": \"30kg\"\n                }\n            }\n        ],\n        \"createdAt\": \"2022-08-11T19:38:51.064Z\",\n        \"updatedAt\": \"2022-08-11T19:38:51.064Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "update (JWT)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"maquina de lavar\",\r\n    \"price\": 350,\r\n    \"description\": \"Maquina de lavar autonoma com economia de energia\",\r\n    \"categories\": [\r\n        \"eletronico\",\r\n        \"domestico\",\r\n        \"para casa\"\r\n    ],\r\n    \"mainCategories\": \"domestico\",\r\n    \"installments\": 7,\r\n    \"images\": [\r\n        \"https://electrolux.vtexassets.com/arquivos/ids/203660/lavadora-turbo-economia-lac09-com-dispenser-autoclean-e-tecnologia-jeteclean-cor-branca-Detalhe1.jpg?v=637394240050630000\",\r\n        \"https://s2.glbimg.com/NzitoDQGhjN6--RWdU8z85QMKmw=/e.glbimg.com/og/ed/f/original/2018/12/21/lava__seca_samsung_wd4000_de_10.2kg.jpg\"\r\n    ],\r\n    \"discount\": 0,\r\n    \"marc\": \"frost-free\",\r\n    \"conditions\": \"novo\",\r\n    \"features\": [\r\n        {\r\n            \"title\": \"gerais\",\r\n            \"body\": {\r\n                \"tipo\": \"eletronico\",\r\n                \"peso\": \"30kg\"\r\n            }\r\n        },\r\n        {\r\n            \"title\": \"gerais\",\r\n            \"body\": {\r\n                \"tipo\": \"eletronico\",\r\n                \"peso\": \"30kg\"\r\n            }\r\n        }\r\n    ],\r\n    \"id\": \"06795568-cdf9-45d8-af1e-c1ed5c45d004\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_API_PRODUTOS}}/product/update",
+					"host": [
+						"{{URL_API_PRODUTOS}}"
+					],
+					"path": [
+						"product",
+						"update"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBlcmVpcmEyLm1hdGhldXNhbHZlc0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Im1hdGhldXMiLCJpZCI6IjdkMTVhNmZiLTY5ZGYtNGFmOC1hYzI5LTViNzVhYjYzNGQ4OCIsImlhdCI6MTY2MDE3NzQxMiwiZXhwIjoxNjYwNzgyMjEyfQ.NodxDhXLsyHV0NFO7DEaxDa4wmHdCVtTF3ustHoVUTM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"maquina de lavar\",\r\n    \"price\": 350,\r\n    \"description\": \"Maquina de lavar autonoma com economia de energia\",\r\n    \"categories\": [\r\n        \"eletronico\",\r\n        \"domestico\",\r\n        \"para casa\"\r\n    ],\r\n    \"mainCategories\": \"domestico\",\r\n    \"installments\": 4,\r\n    \"images\": [\r\n        \"https://electrolux.vtexassets.com/arquivos/ids/203660/lavadora-turbo-economia-lac09-com-dispenser-autoclean-e-tecnologia-jeteclean-cor-branca-Detalhe1.jpg?v=637394240050630000\",\r\n        \"https://s2.glbimg.com/NzitoDQGhjN6--RWdU8z85QMKmw=/e.glbimg.com/og/ed/f/original/2018/12/21/lava__seca_samsung_wd4000_de_10.2kg.jpg\"\r\n    ],\r\n    \"discount\": 0,\r\n    \"marc\": \"frost-free\",\r\n    \"conditions\": \"novo\",\r\n    \"features\": [\r\n        {\r\n            \"title\": \"gerais\",\r\n            \"body\": {\r\n                \"tipo\": \"eletronico\",\r\n                \"peso\": \"30kg\"\r\n            }\r\n        },\r\n        {\r\n            \"title\": \"gerais\",\r\n            \"body\": {\r\n                \"tipo\": \"eletronico\",\r\n                \"peso\": \"30kg\"\r\n            }\r\n        }\r\n    ],\r\n    \"id\": \"817a277b-d9cb-4cfb-aeb5-64c2affa30c7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/product/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"product",
+								"update"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 11 Aug 2022 21:26:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "desactive product (JWT)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "06795568-cdf9-45d8-af1e-c1ed5c45d004",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL_API_PRODUTOS}}/product/desactive",
+					"host": [
+						"{{URL_API_PRODUTOS}}"
+					],
+					"path": [
+						"product",
+						"desactive"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "desactive product",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBlcmVpcmEyLm1hdGhldXNhbHZlc0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Im1hdGhldXMiLCJpZCI6IjdkMTVhNmZiLTY5ZGYtNGFmOC1hYzI5LTViNzVhYjYzNGQ4OCIsImlhdCI6MTY2MDE3NzQxMiwiZXhwIjoxNjYwNzgyMjEyfQ.NodxDhXLsyHV0NFO7DEaxDa4wmHdCVtTF3ustHoVUTM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "3b836249-ee65-488c-bee1-6c40615b594e",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3003/product/desactive",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"product",
+								"desactive"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 12 Aug 2022 00:18:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "delete product (JWT)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"69b5decf-2c63-475e-ac63-fb2ccd66ad95\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_API_PRODUTOS}}/product/delete",
+					"host": [
+						"{{URL_API_PRODUTOS}}"
+					],
+					"path": [
+						"product",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "bc9b1acb-6f81-4546-bc56-148ac7bd3a0c",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete product (JWT)",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBlcmVpcmEyLm1hdGhldXNhbHZlc0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Im1hdGhldXMiLCJpZCI6IjdkMTVhNmZiLTY5ZGYtNGFmOC1hYzI5LTViNzVhYjYzNGQ4OCIsImlhdCI6MTY2MDE3NzQxMiwiZXhwIjoxNjYwNzgyMjEyfQ.NodxDhXLsyHV0NFO7DEaxDa4wmHdCVtTF3ustHoVUTM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"bc9b1acb-6f81-4546-bc56-148ac7bd3a0c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/product/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"product",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "bc9b1acb-6f81-4546-bc56-148ac7bd3a0c",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 12 Aug 2022 00:29:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "get by filters (ok)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"categories\": [\"domestico\",\"make\"],\r\n    \"minValue\": 400,\r\n    \"maxValue\": 500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_API_PRODUTOS}}/product/list/filters",
+					"host": [
+						"{{URL_API_PRODUTOS}}"
+					],
+					"path": [
+						"product",
+						"list",
+						"filters"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get by filters",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categories\": [\"domestico\",\"make\"],\r\n    \"minValue\": 400,\r\n    \"maxValue\": 500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_API_PRODUTOS}}/product/list/filters",
+							"host": [
+								"{{URL_API_PRODUTOS}}"
+							],
+							"path": [
+								"product",
+								"list",
+								"filters"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "4535"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"11b7-pSjzQZHyhXWvCYFhX3++2Q3Q6zY\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Aug 2022 23:39:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"cc4ea4a6-0de4-4d56-bb5e-b10b8c703cce\",\n        \"name\": \"maquina de lavar\",\n        \"price\": \"350\",\n        \"description\": \"Maquina de lavar autonoma com economia de energia\",\n        \"categories\": [\n            \"para o lar\",\n            \"domestico\",\n            \"eletrodomestico\"\n        ],\n        \"mainCategories\": \"domestico\",\n        \"installments\": \"4\",\n        \"images\": [\n            \"https://www.zema.com/ccstore/v1/images/?source=/file/v251228323525211658/products/1381580_002.png\",\n            \"https://compracerta.vtexassets.com/arquivos/ids/212242/Brastemp_Lavadora_BWR12AB_Imagem_3_4.jpg?v=636996859979030000\",\n            \"https://www.zema.com/ccstore/v1/images/?source=/file/v251228323525211658/products/1381580_002.png\"\n        ],\n        \"discount\": null,\n        \"marc\": \"eletrolux\",\n        \"conditions\": \"novo\",\n        \"features\": [\n            {\n                \"title\": \"gerais\",\n                \"body\": {\n                    \"tipo\": \"eletronico\",\n                    \"peso\": \"30kg\"\n                }\n            },\n            {\n                \"title\": \"tecnico\",\n                \"body\": {\n                    \"garantia\": \"1 ano\",\n                    \"manual\": \"sim\"\n                }\n            }\n        ],\n        \"isActive\": true,\n        \"seller\": \"DEFAULT\"\n    },\n    {\n        \"id\": \"98d58bbc-5dcd-43b5-83d6-c1c09cc23ff8\",\n        \"name\": \"PALETA DE SOMBRAS\",\n        \"price\": \"359\",\n        \"description\": \"maquiagem e paleta de sombras\",\n        \"categories\": [\n            \"make\",\n            \"make-up\",\n            \"maquiagem\",\n            \"sombras\",\n            \"feminino\"\n        ],\n        \"mainCategories\": \"maquiagem\",\n        \"installments\": \"10\",\n        \"images\": [\n            \"https://sdcdn.io/mac/br/mac_sku_SGF701_1x1_0.png?width=1080&height=1080\",\n            \"https://sdcdn.io/mac/br/mac_sku_SGF701_1x1_1.png?width=1080&height=1080\",\n            \"https://sdcdn.io/mac/br/mac_sku_SGF701_1x1_6.png?width=1080&height=1080\"\n        ],\n        \"discount\": \"0\",\n        \"marc\": \"NUDE MODEL\",\n        \"conditions\": \"novo\",\n        \"features\": [\n            {\n                \"title\": \"gerais\",\n                \"body\": {\n                    \"marca\": \"NUDE MODEL\"\n                }\n            }\n        ],\n        \"isActive\": true,\n        \"seller\": \"DEFAULT\"\n    },\n    {\n        \"id\": \"3c77a8cd-b2ca-4208-8ccb-a50465d17cbd\",\n        \"name\": \"BASE FLUÍDA STUDIO FIX COM FPS 15\",\n        \"price\": \"239\",\n        \"description\": \"\",\n        \"categories\": [\n            \"make\",\n            \"make-up\",\n            \"maquiagem\",\n            \"sombras\",\n            \"feminino\",\n            \"base\"\n        ],\n        \"mainCategories\": \"maquiagem\",\n        \"installments\": \"10\",\n        \"images\": [\n            \"https://sdcdn.io/mac/br/mac_sku_M6JC04_1x1_3.png?width=1080&height=1080\",\n            \"https://sdcdn.io/mac/br/mac_sku_M6JC04_1x1_2.png?width=1080&height=1080\",\n            \"https://sdcdn.io/mac/br/mac_sku_M6JC04_1x1_0.png?width=1080&height=1080\"\n        ],\n        \"discount\": \"0\",\n        \"marc\": \"MAC\",\n        \"conditions\": \"novo\",\n        \"features\": [\n            {\n                \"title\": \"gerais\",\n                \"body\": {\n                    \"marca\": \"MAC\"\n                }\n            }\n        ],\n        \"isActive\": true,\n        \"seller\": \"DEFAULT\"\n    },\n    {\n        \"id\": \"d7c0adc3-f1b9-41a7-bf05-ef31fc741285\",\n        \"name\": \"Maleta De Maquiagem Profissional Grande Varias Cores Modelos\",\n        \"price\": \"197.3\",\n        \"description\": \"Maleta Profissional Grande\\nCom Maquiagem\\nMaleta + Maquiagem\",\n        \"categories\": [\n            \"make\",\n            \"make-up\",\n            \"maquiagem\",\n            \"sombras\",\n            \"feminino\",\n            \"base\"\n        ],\n        \"mainCategories\": \"maquiagem\",\n        \"installments\": \"10\",\n        \"images\": [\n            \"https://http2.mlstatic.com/D_NQ_NP_767723-MLB48862238150_012022-O.webp\",\n            \"https://http2.mlstatic.com/D_NQ_NP_673525-MLB49186875333_022022-O.webp\",\n            \"https://http2.mlstatic.com/D_NQ_NP_972443-MLB48874106874_012022-O.webp\",\n            \"https://http2.mlstatic.com/D_NQ_NP_668495-MLB48874134693_012022-O.webp\"\n        ],\n        \"discount\": \"45\",\n        \"marc\": \"MAC\",\n        \"conditions\": \"novo\",\n        \"features\": [\n            {\n                \"title\": \"Características principais\",\n                \"body\": {\n                    \"Marca\": \"Ruby Rose\",\n                    \"Modelo\": \"Ruby's 1153\"\n                }\n            }\n        ],\n        \"isActive\": true,\n        \"seller\": \"DEFAULT\"\n    },\n    {\n        \"id\": \"00692a63-1b15-49ac-9675-7898a21bba1c\",\n        \"name\": \"Maleta De Maquiagem Profissional Grande Varias Cores Modelos\",\n        \"price\": \"197.3\",\n        \"description\": \"Maleta Profissional Grande\\nCom Maquiagem\\nMaleta + Maquiagem\",\n        \"categories\": [\n            \"make\",\n            \"make-up\",\n            \"maquiagem\",\n            \"sombras\",\n            \"feminino\",\n            \"base\"\n        ],\n        \"mainCategories\": \"maquiagem\",\n        \"installments\": \"10\",\n        \"images\": [\n            \"https://http2.mlstatic.com/D_NQ_NP_767723-MLB48862238150_012022-O.webp\",\n            \"https://http2.mlstatic.com/D_NQ_NP_673525-MLB49186875333_022022-O.webp\",\n            \"https://http2.mlstatic.com/D_NQ_NP_972443-MLB48874106874_012022-O.webp\",\n            \"https://http2.mlstatic.com/D_NQ_NP_668495-MLB48874134693_012022-O.webp\"\n        ],\n        \"discount\": \"45\",\n        \"marc\": \"MAC\",\n        \"conditions\": \"novo\",\n        \"features\": [\n            {\n                \"title\": \"Características principais\",\n                \"body\": {\n                    \"Marca\": \"Ruby Rose\",\n                    \"Modelo\": \"Ruby's 1153\"\n                }\n            }\n        ],\n        \"isActive\": true,\n        \"seller\": \"DEFAULT\"\n    },\n    {\n        \"id\": \"caa9e1b8-7f5e-412a-b126-9bf31793e538\",\n        \"name\": \"Maleta De Maquiagem Profissional Grande Varias Cores Modelos\",\n        \"price\": \"197.3\",\n        \"description\": \"Maleta Profissional Grande\\nCom Maquiagem\\nMaleta + Maquiagem\",\n        \"categories\": [\n            \"make\",\n            \"make-up\",\n            \"maquiagem\",\n            \"sombras\",\n            \"feminino\",\n            \"base\"\n        ],\n        \"mainCategories\": \"maquiagem\",\n        \"installments\": \"10\",\n        \"images\": [\n            \"https://http2.mlstatic.com/D_NQ_NP_767723-MLB48862238150_012022-O.webp\",\n            \"https://http2.mlstatic.com/D_NQ_NP_673525-MLB49186875333_022022-O.webp\",\n            \"https://http2.mlstatic.com/D_NQ_NP_972443-MLB48874106874_012022-O.webp\",\n            \"https://http2.mlstatic.com/D_NQ_NP_668495-MLB48874134693_012022-O.webp\"\n        ],\n        \"discount\": \"45\",\n        \"marc\": \"MAC\",\n        \"conditions\": \"novo\",\n        \"features\": [\n            {\n                \"title\": \"Características principais\",\n                \"body\": {\n                    \"Marca\": \"Ruby Rose\",\n                    \"Modelo\": \"Ruby's 1153\"\n                }\n            }\n        ],\n        \"isActive\": true,\n        \"seller\": \"Joice Alves\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "upload images of products (JWT)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/perei/OneDrive/Área de Trabalho/perfil.PNG"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/perei/OneDrive/Área de Trabalho/perfil - Copia.PNG"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/perei/OneDrive/Área de Trabalho/perfil.PNG",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL_API_PRODUTOS}}/product/upload",
+					"host": [
+						"{{URL_API_PRODUTOS}}"
+					],
+					"path": [
+						"product",
+						"upload"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "upload images of products",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBlcmVpcmEyLm1hdGhldXNhbHZlc0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6Im1hdGhldXMiLCJpZCI6IjdkMTVhNmZiLTY5ZGYtNGFmOC1hYzI5LTViNzVhYjYzNGQ4OCIsImlhdCI6MTY2MDE3NzQxMiwiZXhwIjoxNjYwNzgyMjEyfQ.NodxDhXLsyHV0NFO7DEaxDa4wmHdCVtTF3ustHoVUTM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/perei/OneDrive/Área de Trabalho/perfil.PNG"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/perei/OneDrive/Área de Trabalho/perfil - Copia.PNG"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/perei/OneDrive/Área de Trabalho/perfil.PNG",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3003/product/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"product",
+								"upload"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1223"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4c7-iE5wXy074NeSNvrOvzxe1x8UvRk\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 13 Aug 2022 20:30:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"fieldname\": \"image\",\n        \"originalname\": \"perfil.PNG\",\n        \"encoding\": \"7bit\",\n        \"mimetype\": \"image/png\",\n        \"size\": 395692,\n        \"bucket\": \"commerce-suit\",\n        \"key\": \"productd_images/7d15a6fb-69df-4af8-ac29-5b75ab634d88/4929d25b-2985-4fa8-af8b-145026f4ce8a-perfil.PNG\",\n        \"acl\": \"public-read\",\n        \"contentType\": \"image/png\",\n        \"contentDisposition\": null,\n        \"contentEncoding\": null,\n        \"storageClass\": \"STANDARD\",\n        \"serverSideEncryption\": null,\n        \"location\": \"https://commerce-suit.s3.us-east-1.amazonaws.com/productd_images/7d15a6fb-69df-4af8-ac29-5b75ab634d88/4929d25b-2985-4fa8-af8b-145026f4ce8a-perfil.PNG\",\n        \"etag\": \"\\\"53350e3f757ee4dcd920f49e62ccbe0d\\\"\"\n    },\n    {\n        \"fieldname\": \"image\",\n        \"originalname\": \"perfil - Copia.PNG\",\n        \"encoding\": \"7bit\",\n        \"mimetype\": \"image/png\",\n        \"size\": 395692,\n        \"bucket\": \"commerce-suit\",\n        \"key\": \"productd_images/7d15a6fb-69df-4af8-ac29-5b75ab634d88/241532b0-fa4d-4e99-ac5d-24e48b55dfc8-perfil - Copia.PNG\",\n        \"acl\": \"public-read\",\n        \"contentType\": \"image/png\",\n        \"contentDisposition\": null,\n        \"contentEncoding\": null,\n        \"storageClass\": \"STANDARD\",\n        \"serverSideEncryption\": null,\n        \"location\": \"https://commerce-suit.s3.us-east-1.amazonaws.com/productd_images/7d15a6fb-69df-4af8-ac29-5b75ab634d88/241532b0-fa4d-4e99-ac5d-24e48b55dfc8-perfil%20-%20Copia.PNG\",\n        \"etag\": \"\\\"53350e3f757ee4dcd920f49e62ccbe0d\\\"\"\n    }\n]"
+				}
+			]
+		}
+	]
+}
