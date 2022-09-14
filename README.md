@@ -124,7 +124,7 @@ ou
 
 # Documentação da api
 
-a collection postman dessa api está idisponivel dentro desse repositório: em: https://github.com/matheusgit1/api-enderecos/blob/main/adress.api.docs
+a collection postman dessa api está idisponivel dentro desse repositório: em: [https://github.com/matheusgit1/api-enderecos/blob/main/adress.api.docs](https://github.com/matheusgit1/api-produtos/blob/main/products.api.collection)
 
 ### variaveis
 
@@ -385,7 +385,7 @@ stauts 200 - ok
 #### consfigureo antes de executar essa rota com base nessa mesma documentação
 
 ```http
-  POST /product/desactive
+  POST /product/upload
 ```
 
 | Headers   | Tipo       | Descrição                           |
